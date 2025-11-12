@@ -13,6 +13,18 @@ Therefore the answer is 06:05.*/
         int totalHours = totalMin / 60;
         int newHours = totalHours % 24;
         int newMin = totalMin - (totalHours * 60);
-
+        if(newHours < 10){
+            String strNewHours = "0" + Integer.toString(newHours);
+            if(newMin < 10){
+                String strNewMin = "0" + Integer.toString(newMin);
+                System.out.println(strNewHours + ":" + strNewMin);
+            }else{System.out.println(strNewHours + ":" + newMin);}
+        }else{
+            if(newMin < 10){
+                String strNewMin = "0" + Integer.toString(newMin);
+                System.out.println(newHours + ":" + strNewMin);
+            }else{System.out.println(newHours + ":" + newMin);}
+        }
     }
 }
+
